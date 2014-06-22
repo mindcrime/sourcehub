@@ -31,6 +31,16 @@ class ProjectController
 		[projects:projects];
 	}
 	
+	def edit =
+	{
+		[]
+	}
 	
+	def update =
+	{
+		Project project = null;
+		
+		redirect( controller:'project', action:'view', id:project.id)
+	}
 	
 }

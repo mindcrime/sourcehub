@@ -55,11 +55,6 @@ body {
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<!-- <li class="active"><g:link controller="home" action="index" class="navbar-brand">Home</g:link></li> -->
-					<li> <g:link controller="project" action="list">Projects</g:link></li>
-					<li> <a href="#news">News</a></li>
-					<li> <g:link controller="home" action="about">About</g:link></li>
-					<li> <g:link controller="home" action="contact">Contact</g:link></li>
-					<li> <a href="#search">Search</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
