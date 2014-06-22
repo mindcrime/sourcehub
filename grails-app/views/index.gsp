@@ -5,7 +5,8 @@
 		<title>Freshermeat</title>
 	</head>
 	<body>
-		<h1>This might become "Freshermeat" a replacement for the now
-		dormant freshmeat.net/freecode.com website. </h1>
+		<h1>Welcome to SourceHub</h1>
+		<div>This might become "sourcehub.org" (or something else) -  a replacement for the now
+		dormant freshmeat.net/freecode.com website. <div>
 	</body>
 </html>
