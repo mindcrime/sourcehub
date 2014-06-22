@@ -4,8 +4,13 @@ class Project
 {
 	String name
 	String description
-	Set<String> troveCategories
-	Set<String> tags
-	Set<String> languages
+		
+	static constraints=
+	{
+		name( nullable:false, maxSize:2048)
+		description( nullable:false, maxSize:5048 )
+	}
+	
+	static hasMany = [troveCategories:String, tags:String, languages:String]
 	
 }
