@@ -5,6 +5,16 @@ class HomeController
 	def index = 
 	{
 		
-		[];
+		[]
+	}
+	
+	def about =
+	{
+		[]
+	}
+	
+	def contact =
+	{
+		[]
 	}
 }
