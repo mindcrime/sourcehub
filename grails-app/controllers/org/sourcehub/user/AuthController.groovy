@@ -6,7 +6,8 @@ import org.apache.shiro.authc.UsernamePasswordToken
 import org.apache.shiro.web.util.SavedRequest
 import org.apache.shiro.web.util.WebUtils
 
-class AuthController {
+class AuthController 
+{
     def shiroSecurityManager
 
     def index = { redirect(action: "login", params: params) }
@@ -40,6 +41,8 @@ class AuthController {
             // password is incorrect.
             SecurityUtils.subject.login(authToken)
 
+			session.user = SecurityUtils.subject.principal;
+			
             log.info "Redirecting to '${targetUri}'."
             redirect(uri: targetUri)
         }
@@ -68,7 +71,8 @@ class AuthController {
 
     def signOut = {
         // Log the user out of the application.
-        SecurityUtils.subject?.logout()
+        session.user = null
+		SecurityUtils.subject?.logout()
         webRequest.getCurrentRequest().session = null
 
         // For now, redirect back to the home page.

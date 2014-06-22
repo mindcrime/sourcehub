@@ -35,7 +35,7 @@
 						<button type="button" class="btn btn-lg btn-default">Create New Project</button>
 					</g:link>
 					<br />
-					<g:link controller="project" action="create">
+					<g:link controller="project" action="listUserOwned">
 						<button type="button" class="btn btn-lg btn-default">My Projects</button>
 					</g:link>
 					<br />

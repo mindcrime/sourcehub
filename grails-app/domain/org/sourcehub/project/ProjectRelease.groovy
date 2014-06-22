@@ -5,4 +5,6 @@ class ProjectRelease
 	Project project
 	String releaseNotes
 	String version
+	
+	static belongsTo = Project
 }

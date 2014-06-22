@@ -12,7 +12,7 @@ class ProjectController
 	
 	def save =
 	{
-		Project project = projectService.createProject( params.projectName, params.projectDescription)
+		Project project = projectService.createProject( params.projectName, params.projectDescription, session.user )
 		
 		redirect( controller:'project', action:'view', id:project.id)	
 	}
@@ -42,5 +42,13 @@ class ProjectController
 		
 		redirect( controller:'project', action:'view', id:project.id)
 	}
+	
+	def listUserOwned =
+	{
+		// List the projects owned by this user
+		List<Project> projects = projectService.findProjectsByOwner( session.user )
+		[projects:projects]
+	}
+	
 	
 }

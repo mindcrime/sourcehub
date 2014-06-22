@@ -60,6 +60,7 @@ body {
 					<li> <g:link controller="home" action="about">About</g:link></li>
 					<li> <g:link controller="home" action="contact">Contact</g:link></li>
 					<li> <a href="#search">Search</a></li>
+					<li><a href="http://freecode.com" target="_blank">Freecode.com</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
