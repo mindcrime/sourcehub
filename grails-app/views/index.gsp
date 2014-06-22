@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Freshermeat</title>
+		<title>SourceHub</title>
 	</head>
 	<body>
 		<h1>Welcome to SourceHub</h1>
