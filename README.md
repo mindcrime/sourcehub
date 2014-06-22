@@ -10,3 +10,7 @@ Some references:
 * [The "Trove" Taxonomy](https://wiki.linuxfoundation.org/en/Osapa:SF/Freshmeat_Trove)
 * [Description Of A Project - DOAP](https://github.com/edumbill/doap/wiki)
 * [Friend Of A Friend - FOAF](http://www.foaf-project.org/)
+
+License:
+
+[Apache License v2](http://www.apache.org/licenses/LICENSE-2.0.html)
