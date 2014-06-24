@@ -34,16 +34,16 @@ If you do not have Grails already, here's how you set it up.
 1. Download Grails 2.2.3.  The simplest way to do this is simply "wget -O grails-2.2.3.zip http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-2.2.3.zip"
 
 2. unzip the grails distribution and put it somewhere convenient.  Example:
-> unzip grails-2.2.3.zip
+    unzip grails-2.2.3.zip
+    sudo mv grails-2.2.3 /opt/
 
-> sudo mv grails-2.2.3 /opt/
 Of course, you don't have to put it in /opt, you can put the grails distribution anywhere you like.
 
 3. Add the grails "bin" directory to your path.  The easiest way to do this is to add a script to /etc/profiles.d/
 that looks something like this:
 
-\#!/bin/bash                                                                     
-export PATH="/opt/grails-2.2.3/bin:$PATH"
+    \#!/bin/bash                                                                     
+    export PATH="/opt/grails-2.2.3/bin:$PATH"
 
 OR you could add the path to your .bashrc file (or corresponding file for whatever shell you happen to use)
 
