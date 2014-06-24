@@ -50,5 +50,23 @@ class ProjectController
 		[projects:projects]
 	}
 	
+
+	def createRelease =
+	{
+		List<Project> availableProjects = projectService.findProjectsByOwner( session.user );
+		
+		[availableProjects:availableProjects];
+	}	
 	
+	def saveRelease =
+	{
+		println "Params: ${params}";
+		
+		ProjectRelease release = projectService.createRelease( params.projectId, 
+															   params.version,
+															   params.releaseNotes );
+														   
+		redirect( controller:"project", action:"view", id:params.projectId );												   
+														   
+	}
 }

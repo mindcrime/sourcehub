@@ -2,9 +2,11 @@ package org.sourcehub.project
 
 class ProjectRelease 
 {
+	Long id;
 	Project project
 	String releaseNotes
-	String version
+	String releaseVersion
+	Date dateCreated
 	
 	static belongsTo = Project
 }

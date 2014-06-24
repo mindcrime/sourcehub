@@ -4,9 +4,11 @@ import org.sourcehub.user.User
 
 class Project 
 {
+	Long id
 	String name
 	String description
 	User owner
+	Date dateCreated
 		
 	static constraints=
 	{
@@ -16,5 +18,8 @@ class Project
 	}
 	
 	static hasMany = [releases:ProjectRelease, troveCategories:String, tags:String, languages:String]
-	
+	static mapping =
+	{
+		releases lazy: false
+	}
 }

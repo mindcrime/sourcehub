@@ -43,4 +43,33 @@ class ProjectService
 		
 		return projects;
 	}
+	
+	public ProjectRelease createRelease( final String projectId, final String version,
+										 final String releaseNotes )
+	{
+		println "version: ${version}";
+		
+		Project theProject = this.findById( Long.parseLong( projectId ));
+		
+		ProjectRelease release = new ProjectRelease();
+		release.project = theProject;
+		release.releaseVersion = version;
+		release.releaseNotes = releaseNotes;
+		theProject.addToReleases( release );
+
+		theProject.save(flush:true);
+		
+		return release;
+	}
+	
+	// TODO: add pagination support, overrides for retrieving for specific date
+	// ranges?
+	public List<ProjectRelease> getRecentReleases()
+	{
+		
+		List<ProjectRelease> recentReleases = ProjectRelease.executeQuery( "select release from ProjectRelease as release order by dateCreated desc", [max:10] );
+		
+		return recentReleases;
+	}
+	
 }

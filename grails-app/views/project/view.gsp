@@ -21,6 +21,14 @@
 					</g:link>
 				</div>
 			</div>
+			<div class="row">
+				<h3>Recent Releases</h3>
+				<ul>
+				<g:each in="${project.releases}" var="release">
+					<li>${release.releaseVersion} - ${release.releaseNotes}</li>
+				</g:each>
+				</ul>
+			</div>
 		</div>
 	</body>
 </html>

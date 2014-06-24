@@ -57,8 +57,8 @@
 				<b>New Releases...</b>
 				
 				<ul>
-					<g:each in="${releases}" var="release">
-						<li></li>
+					<g:each in="${recentReleases}" var="release">
+						<li>${release.releaseVersion} - ${release.releaseNotes}</li>
 					</g:each>
 				</ul>
 			</div>
