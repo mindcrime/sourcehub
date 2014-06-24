@@ -35,8 +35,8 @@ If you do not have Grails already, here's how you set it up.
 
 2. unzip the grails distribution and put it somewhere convenient.  Example:
 > unzip grails-2.2.3.zip
-> sudo mv grails-2.2.3 /opt/
 
+> sudo mv grails-2.2.3 /opt/
 Of course, you don't have to put it in /opt, you can put the grails distribution anywhere you like.
 
 3. Add the grails "bin" directory to your path.  The easiest way to do this is to add a script to /etc/profiles.d/
@@ -48,6 +48,7 @@ export PATH="/opt/grails-2.2.3/bin:$PATH"
 OR you could add the path to your .bashrc file (or corresponding file for whatever shell you happen to use)
 
 4. Once the path is set, you know you're good to go if you can run the command "grails -version" and get output like
+
 > Grails version: 2.2.3
 
 
